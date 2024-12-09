@@ -161,8 +161,12 @@ export function SourceJumpOverlayPortal() {
   const [element, setElement] = useState<HTMLElement | null>(null);
   useEffect(() => {
     const tooltip = document.createElement("div");
-    tooltip.style.isolation = "isolation";
-    tooltip.style.pointerEvents = "none";
+    tooltip.style.position = "fixed"; // スタッキングコンテキストを作成
+    tooltip.style.top = "0";
+    tooltip.style.left = "0";
+    tooltip.style.width = "100%";
+    tooltip.style.height = "100%";
+    tooltip.style.zIndex = "2147483647"; // 最大のz-index
     tooltip.dataset.sjUi = "true";
     document.body.appendChild(tooltip);
     setElement(tooltip);
