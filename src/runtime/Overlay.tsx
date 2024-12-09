@@ -167,6 +167,7 @@ export function SourceJumpOverlayPortal() {
     tooltip.style.width = "100%";
     tooltip.style.height = "100%";
     tooltip.style.zIndex = "2147483647"; // 最大のz-index
+    tooltip.style.pointerEvents = "none"; // 他の要素にイベントを通す
     tooltip.dataset.sjUi = "true";
     document.body.appendChild(tooltip);
     setElement(tooltip);

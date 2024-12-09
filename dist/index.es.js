@@ -227,6 +227,7 @@ function SourceJumpOverlayPortal() {
     tooltip.style.width = "100%";
     tooltip.style.height = "100%";
     tooltip.style.zIndex = "2147483647";
+    tooltip.style.pointerEvents = "none";
     tooltip.dataset.sjUi = "true";
     document.body.appendChild(tooltip);
     setElement(tooltip);
