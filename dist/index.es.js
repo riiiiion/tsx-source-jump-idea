@@ -46,7 +46,7 @@ function appendSourceMapAttribute(opts, node) {
     }
     return factoryMethod(node.tagName, node.typeArguments, factory.updateJsxAttributes(node.attributes, [
       ...node.attributes.properties,
-      factory.createJsxAttribute(factory.createIdentifier("data-sj-path"), factory.createStringLiteral(`idea://file${fileName}:${position.line + 1}:${position.character + 1}`)),
+      factory.createJsxAttribute(factory.createIdentifier("data-sj-path"), factory.createStringLiteral(`idea://open?file=${encodeURIComponent(fileName)}&line=${position.line + 1}&column=${position.character + 1}`)),
       factory.createJsxAttribute(factory.createIdentifier("data-sj-display-name"), factory.createStringLiteral(displayText)),
       ...inlineCode ? [
         factory.createJsxAttribute(factory.createIdentifier("data-sj-code"), factory.createStringLiteral(encodeURIComponent(inlineCode)))

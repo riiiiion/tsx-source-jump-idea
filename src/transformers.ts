@@ -71,11 +71,9 @@ function appendSourceMapAttribute(
         ...node.attributes.properties,
         factory.createJsxAttribute(
           factory.createIdentifier("data-sj-path"),
-          factory.createStringLiteral(
-            `idea://file${fileName}:${position.line + 1}:${
-              position.character + 1
-            }`
-          )
+            factory.createStringLiteral(
+                `idea://open?file=${encodeURIComponent(fileName)}&line=${position.line + 1}&column=${position.character + 1}`
+            )
         ),
         factory.createJsxAttribute(
           factory.createIdentifier("data-sj-display-name"),
