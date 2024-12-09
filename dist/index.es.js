@@ -191,7 +191,7 @@ function SourceJumpOverlay() {
       background: "rgba(0,0,255,0.5)",
       color: "#fff",
       padding: 5,
-      zIndex: 1,
+      zIndex: 1e4,
       borderRadius: 4,
       pointerEvents: "auto"
     },
@@ -211,7 +211,7 @@ function SourceJumpOverlay() {
       borderRadius: 2,
       padding: 3,
       boxSizing: "border-box",
-      zIndex: 1,
+      zIndex: 1e4,
       width: "100%",
       overflow: "scroll"
     }
