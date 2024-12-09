@@ -72,7 +72,7 @@ function appendSourceMapAttribute(
         factory.createJsxAttribute(
           factory.createIdentifier("data-sj-path"),
           factory.createStringLiteral(
-            `vscode://file${fileName}:${position.line + 1}:${
+            `idea://file${fileName}:${position.line + 1}:${
               position.character + 1
             }`
           )
