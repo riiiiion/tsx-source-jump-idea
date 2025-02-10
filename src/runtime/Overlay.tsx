@@ -64,7 +64,8 @@ export function SourceJumpOverlay() {
       if (ev.shiftKey && ev.altKey) setActive(true);
     };
     const keyUpHandler = (ev: KeyboardEvent) => {
-      if (ev.shiftKey && ev.altKey) setActive(false);
+      if (ev.shiftKey ) setActive(false);
+      if (ev.altKey) setActive(false);
     };
     addEventListener("blur", blurHandler);
 

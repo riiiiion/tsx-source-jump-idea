@@ -141,7 +141,9 @@ function SourceJumpOverlay() {
         setActive(true);
     };
     const keyUpHandler = (ev) => {
-      if (ev.shiftKey && ev.altKey)
+      if (ev.shiftKey)
+        setActive(false);
+      if (ev.altKey)
         setActive(false);
     };
     addEventListener("blur", blurHandler);
