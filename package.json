@@ -20,6 +20,7 @@
     }
   },
   "scripts": {
+    "prepare": "tsc -p . && vite build",
     "prepublishOnly": "tsc -p . && vite build"
   },
   "peerDependencies": {
