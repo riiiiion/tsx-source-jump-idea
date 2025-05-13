@@ -114,6 +114,36 @@ In browser, `SourceJumpOverlayPortal` component catches `mouseover` events and o
 - [ ] Lightweight runtime (preact)
 - [ ] Inline Code Editor
 
+## Publishing to npm
+
+To publish this package to npm, follow these steps:
+
+1. Make sure you have an npm account and are logged in:
+   ```bash
+   npm login
+   ```
+
+2. Build the package:
+   ```bash
+   npm run prepare
+   ```
+
+3. Publish to npm:
+   ```bash
+   npm publish
+   ```
+
+If you want to test the package locally before publishing:
+```bash
+npm pack
+```
+This will create a tarball that you can install in another project with:
+```bash
+npm install /path/to/tsx-source-jump-0.1.2.tgz
+```
+
 ## LICENSE
 
 MIT
+
+This project is a fork of [tsx-source-jump](https://github.com/mizchi/tsx-source-jump) by [mizchi](https://github.com/mizchi), with modifications to support IntelliJ IDEA instead of VSCode.
